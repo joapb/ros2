@@ -1,0 +1,24 @@
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Configuring done (1.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/aluno/ros2_ws/build/my_cpp_pkg
+[ 50%] [32mBuilding CXX object CMakeFiles/cpp_node.dir/src/my_first_node.cpp.o[0m
+[01m[K/home/aluno/ros2_ws/src/my_cpp_pkg/src/my_first_node.cpp:20:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+   20 | }
+      |  [01;31m[K^[m[K
+      |  [32m[K;[m[K
+[01m[K/home/aluno/ros2_ws/src/my_cpp_pkg/src/my_first_node.cpp:[m[K In constructor ‘[01m[KMyNode::[01;32m[KMyNode[m[K()[m[K’:
+[01m[K/home/aluno/ros2_ws/src/my_cpp_pkg/src/my_first_node.cpp:9:23:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kcreate_wall_timer[m[K’ in ‘[01m[K(MyNode*)this[m[K’, which is of pointer type ‘[01m[KMyNode*[m[K’ (maybe you meant to use ‘[01m[K->[m[K’ ?)
+    9 |         timer_ = this.[01;31m[Kcreate_wall_timer[m[K(std::chrono::seconds(1),
+      |                       [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/cpp_node.dir/build.make:76: CMakeFiles/cpp_node.dir/src/my_first_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/cpp_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

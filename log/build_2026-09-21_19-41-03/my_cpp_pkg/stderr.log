@@ -1,0 +1,29 @@
+[01m[K/home/aluno/ros2_ws/src/my_cpp_pkg/src/my_first_node.cpp:20:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+   20 | }
+      |  [01;31m[K^[m[K
+      |  [32m[K;[m[K
+[01m[K/home/aluno/ros2_ws/src/my_cpp_pkg/src/my_first_node.cpp:[m[K In constructor ‘[01m[KMyNode::[01;32m[KMyNode[m[K()[m[K’:
+[01m[K/home/aluno/ros2_ws/src/my_cpp_pkg/src/my_first_node.cpp:9:23:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kcreate_wall_timer[m[K’ in ‘[01m[K(MyNode*)this[m[K’, which is of pointer type ‘[01m[KMyNode*[m[K’ (maybe you meant to use ‘[01m[K->[m[K’ ?)
+    9 |         timer_ = this.[01;31m[Kcreate_wall_timer[m[K(std::chrono::seconds(1),
+      |                       [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/aluno/ros2_ws/src/my_cpp_pkg/src/my_first_node.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/aluno/ros2_ws/src/my_cpp_pkg/src/my_first_node.cpp:26:17:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kspin(std::shared_ptr<MyNode> (*&)())[m[K’
+   26 |     [01;31m[Krclcpp::spin(node)[m[K;
+      |     [01;31m[K~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:176[m[K,
+                 from [01m[K/home/aluno/ros2_ws/src/my_cpp_pkg/src/my_first_node.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:59:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::[01;32m[Kspin[m[K(node_interfaces::NodeBaseInterface::SharedPtr)[m[K’
+   59 | [01;36m[Kspin[m[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr);
+      | [01;36m[K^~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:59:60:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<MyNode> (*)()[m[K’ to ‘[01m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<rclcpp::node_interfaces::NodeBaseInterface>[m[K’}
+   59 | spin([01;36m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr[m[K);
+      |      [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:63:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::[01;32m[Kspin[m[K(Node::SharedPtr)[m[K’
+   63 | [01;36m[Kspin[m[K(rclcpp::Node::SharedPtr node_ptr);
+      | [01;36m[K^~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:63:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<MyNode> (*)()[m[K’ to ‘[01m[Krclcpp::Node::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<rclcpp::Node>[m[K’}
+   63 | spin([01;36m[Krclcpp::Node::SharedPtr node_ptr[m[K);
+      |      [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/cpp_node.dir/build.make:76: CMakeFiles/cpp_node.dir/src/my_first_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/cpp_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
